@@ -1,0 +1,25 @@
+header{
+    height: 100vh;
+    background-image:linear-gradient(rgb(0 0 0 / 67%), rgb(0 0 0 / 77%)) ,url(../images/slider-02.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.nav-link,.navbar-brand {
+    color: #fff;
+}
+
+.navbar-nav .nav-link.active,.nav-link:hover,.content a {
+    color: #86243d;
+}
+/* .nav-link  */
+.nav-link::after{
+content: "";
+width: 40px;
+height: 2px;
+bottom: 0;
+left: 10px;
+position: absolute;
+background-color: #86243d;
+
+}
