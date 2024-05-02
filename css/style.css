@@ -1,25 +1,265 @@
-header{
-    height: 100vh;
-    background-image:linear-gradient(rgb(0 0 0 / 67%), rgb(0 0 0 / 77%)) ,url(../images/slider-02.jpg);
+.navbar {
+    z-index: 999;
+}
+
+.nav-link {
+    --bs-navbar-nav-link-padding-x: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+}
+
+.nav-link:hover::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    animation-name: link-line;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    left: 0;
+    background-color: aliceblue;
+}
+
+@keyframes link-line {
+    from {
+        right: 100%;
+    }
+
+    to {
+        right: 10%;
+    }
+}
+
+.dropdown-toggle::after {
+    content: "\f107";
+    border: 0;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    vertical-align: 0;
+}
+
+.dropdown-menu {
+    --bs-dropdown-border-radius: 0;
+    --bs-dropdown-border-width: 0;
+    --bs-dropdown-border-color: trasparent;
+    top: -50%;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.main {
+    background-image: url("../images/hero-bg.jpg");
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
-.nav-link,.navbar-brand {
+.main .inner {
+    z-index: 100;
+}
+
+.main-layout {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.w-85 {
+    width: 85%;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.bg-opacity-85 {
+    --bs-bg-opacity: 0.85;
+}
+
+.progress {
+    --bs-progress-bg: #cde1f8;
+    border-radius: 0;
+    height: 0.7rem;
+}
+
+.serv .service {
+    transition: all 0.7s ease-in-out;
+}
+
+.serv .service i {
+    transition: all 0.7s ease-in-out;
+}
+
+.serv:hover .service {
+    background-color: #0078ff;
+    border: 10px solid #cde1f8;
+}
+
+.serv:hover .service i {
     color: #fff;
-}
-
-.navbar-nav .nav-link.active,.nav-link:hover,.content a {
-    color: #86243d;
-}
-/* .nav-link  */
-.nav-link::after{
-content: "";
-width: 40px;
-height: 2px;
-bottom: 0;
-left: 10px;
-position: absolute;
-background-color: #86243d;
 
 }
+
+.service {
+    padding: 13px;
+    width: 105px;
+    border: 10px solid #0078ff;
+}
+
+.service i {
+    font-size: 40px;
+}
+
+.counter {
+    background-image: url('../images/counters-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.counter .counter-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(0, 120, 255, 0.7);
+}
+.counter .up{
+    z-index: 100;
+    position: relative;
+}
+
+.counter .count {
+    width: 80px;
+    border: 10px #cde1f8 solid ;
+}
+
+.counter .count i {
+    font-size: 30px;
+}
+
+.portfolio i{
+    font-size: 40px;
+    color: #0078ff;
+}
+
+.portfolio .one-portfolio {
+    overflow: hidden;
+}
+.portfolio .one-portfolio .portfolio-img-container img{
+    max-height: 400px;
+    transition: transform 0.5s ease-in-out;
+}
+.portfolio .one-portfolio:hover img {
+    transform: scale(1.2);
+}
+
+
+.slide{
+    background-image: url(../images/overlay-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.slide .silde-layout{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 120, 255, 0.7);
+}
+
+.slide .carousel-indicators{
+    margin-bottom: 0;
+    bottom: -20px;
+}
+.silde .carousel-inner img{
+    width: 300px;
+}
+
+.py-150{
+    padding: 150px 0px;
+}
+
+.carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.blog .blog-text-link a h5{
+    transition: all 0.5s ease-in-out;
+}
+.blog .blog-text-link a h5:hover{
+    color: #0078ff;
+}
+.blog .inner-blog{
+    border: 2px solid rgba(0, 0, 0, 0.175);
+} 
+.blog .blog-owner{
+    border-top: 2px solid rgba(0, 0, 0, 0.175);
+}
+.w-30px{
+    width: 30px;
+}
+.h-30px{
+    height: 30px;
+}
+.touch{
+    background-image: url(../images/overlay-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.touch .touch-layout{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 120, 255, 0.7);
+}
+.touch .form-data{
+    position: relative;
+    z-index: 100;
+}
+footer{
+    background-color: #0062d3;
+}
+
+.about_line{
+    width: 120px;
+    height: 3px;
+}
+.section_line{
+    width: 50px;
+    height: 5px;
+}
+
+.carousel-control-prev {
+    left: -190px;
+}
+.carousel-control-next {
+    right: -190px;
+}
+
+.modal-content{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content .btn-close{
+    position:  relative;
+    top: 20px;
+    right: 20px;
+}
+
